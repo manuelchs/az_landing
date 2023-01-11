@@ -1,0 +1,20 @@
+{
+  "name": "az_landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelchs/az_landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manuelchs/az_landing/issues"
+  },
+  "homepage": "https://github.com/manuelchs/az_landing#readme"
+}
