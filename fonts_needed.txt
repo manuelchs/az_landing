@@ -1,0 +1,8 @@
+Camphor Pro
+- Bold
+- Heavy
+- Heavy Italic
+- Light Italic
+- Medium
+- Regular
+- Medium Italic- Bold Italic
