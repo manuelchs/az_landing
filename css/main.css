@@ -1450,6 +1450,18 @@ input, select, textarea {
   position: relative;
   margin-bottom: 2rem;
 }
+.about-section .info-about .item-circle:not(.end):after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: red;
+  transform: translateY(-50%);
+}
 .about-section .info-about .item-circle:before {
   content: "";
   display: block;
