@@ -1,0 +1,247 @@
+.main-button {
+    background-color: $mainColor;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    min-width: 200px;
+    cursor: pointer;
+    transition: all .2s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0px 3px 6px rgba(black, 0);
+    white-space: nowrap;
+    width: fit-content;
+
+    &:disabled {
+        cursor: default;
+        background-color: $lightGray;
+        span {
+            color: $mediumGray;
+        }
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: black;
+        opacity: 0;
+        transition: all .25s;
+        z-index: 0;
+    }
+
+    span {
+        color: white;
+        z-index: 1;
+        position: relative;
+        line-height: 1;
+        font-weight: $medium;
+    }
+
+
+    &:hover:not([disabled]) {
+        box-shadow: 0px 3px 6px rgba(black, 0.2);
+        &:before {
+            opacity: .4;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px 5px rgba($mainColor, 0.9);
+    }
+
+    &:active:not([disabled]) {
+        &:before {
+            opacity: .6;
+        }
+    }
+
+    &.icon {
+        i {
+            z-index: 1;
+            position: relative;
+            transition: all .2s;
+            color: white;
+            margin-top: -5px;
+        }
+
+        &.icon-right {
+            i {
+                margin-left: 0.5rem;
+            }
+            &:hover {
+                i {
+                    // margin-left: 1rem;
+                }
+            }
+        }
+
+        &.icon-left {
+            i {
+                margin-right: 0.5rem;
+            }
+            &:hover {
+                i {
+                    // margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    &.red-button {
+        background-color: $errorColor;
+        &[disabled] {
+            background-image: none;
+            background-color: $gray;
+            span {
+                color: $mediumGray;
+            }
+        }
+        &:focus, &:active {
+            box-shadow: 0px 0px 5px rgba($errorColor, 0.9);
+        }
+    }
+
+    &.white-button {
+        background-color: white;
+        span {
+            color: $mainColor;
+        }
+        &:before {
+            display: none;
+        }
+
+    }
+
+    &.ghost-button {
+        background-color: transparent;
+        border: 1px solid;
+        span {
+            color: $mainColor;
+        }
+        &.white-button {
+            border-color: white;
+            span {
+                color: white;
+            }
+            &:hover {
+                background-color: white;
+                span {
+                    color: $mainColor;
+                }
+            }
+            &:disabled {
+                border-color: $gray;
+                span {
+                    color: $gray;
+                }
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+        &.red-button {
+            border-color: $errorColor;
+            span {
+                color: $errorColor;
+            }
+            &:hover {
+                background-color: lighten($errorColor, 40%);
+            }
+            &.icon {
+                i {
+                    color: $errorColor;
+                }
+            }
+            &:disabled {
+                border-color: $gray;
+                span {
+                    color: $gray;
+                }
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+        &:before {
+            display: none;
+        }
+
+        &.green-button {
+            border-color: $mainColor;
+            span {
+                color: $mainColor;
+            }
+            &:hover {
+                background-color: lighten($mainColor, 65%);
+            }
+            &.icon {
+                i {
+                    color: $mainColor;
+                }
+            }
+        }
+
+        &:disabled {
+            border-color: $mediumGray;
+            span {
+                color: $mediumGray;
+            }
+            &:hover {
+                background-color: transparent;
+            }
+            &.icon {
+                i {
+                    color: $mediumGray;
+                }
+            }
+        }
+
+    }
+
+    &.loading:disabled {
+        height: 47px;
+        position: relative;
+        cursor: default;
+        span {
+            opacity: 0;
+        }
+        i {
+            opacity: 0;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            font-family: 'Font Awesome 5 Pro';
+            font-weight: normal;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 3px solid $mediumGray;
+            border-color: $mediumGray transparent $mediumGray transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+    }
+}
+
+@keyframes lds-dual-ring {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

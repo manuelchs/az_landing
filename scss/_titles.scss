@@ -1,0 +1,43 @@
+.main-title {
+    font-size: 34px;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    @media #{$ipad} {
+        font-size: 28px;
+    }
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 6px;
+        background-color: $mainColor;
+        bottom: -10px;
+        left: 0;
+        transform: skew(-15deg);
+    }
+    &:before {
+        width: 21px;
+    }
+    &:after {
+        width: 41px;
+        left: 29px;
+    }
+
+    &.centered {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before {
+            left: calc(50% - 23px);
+            transform: translateX(-50%) skew(-15deg);
+        }
+        &:after {
+            width: 41px;
+            left: calc( 50% + 29px + 8px - 23px );
+            transform: translateX(-50%) skew(-15deg);
+        }
+    }
+}

@@ -1,0 +1,360 @@
+@font-face {
+    font-family: 'MainFont';
+    src: url('/fonts/CamphorPro-Bold.otf');
+    font-weight: $bold;
+}
+@font-face {
+    font-family: 'MainFont';
+    src: url('/fonts/CamphorPro-BoldItalic.otf');
+    font-weight: $bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'MainFont';
+    src: url('/fonts/CamphorPro-Heavy.otf');
+    font-weight: $heavy;
+}
+@font-face {
+    font-family: 'MainFont';
+    src: url('/fonts/CamphorPro-HeavyItalic.otf');
+    font-weight: $heavy;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'MainFont';
+    src: url('/fonts/CamphorPro-LightItalic.otf');
+    font-weight: $light;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'MainFont';
+    src: url('/fonts/CamphorPro-Medium.otf');
+    font-weight: $medium;
+}
+@font-face {
+    font-family: 'MainFont';
+    src: url('/fonts/CamphorPro-MediumItalic.otf');
+    font-weight: $medium;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'MainFont';
+    src: url('/fonts/CamphorPro-Regular.otf');
+    font-weight: $regular;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MainFont', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-weight: $regular;
+    font-size: 16px;
+    color: $black;
+    overflow-x: hidden;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    font-weight: normal;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+img {
+    display: block;
+}
+
+.mt-half {
+    margin-top: 0.5rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-1-half {
+    margin-top: 1.5rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-1-half {
+    margin-bottom: 1.5rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: $black;
+}
+
+.gmw {
+    width: calc(100% - 2rem);
+    max-width: 1240px;
+    margin: 0 auto;
+
+    @media #{$macbook} {
+        // max-width: 1100px;
+    }
+
+    &.small {
+        max-width: 1100px;
+    }
+
+    &.two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+
+        @media #{$ipad} {
+            grid-template-columns: 1fr;
+        }
+
+        & > * {
+            width: 100%;
+        }
+    }
+}
+
+.main-wrapper {
+    padding: 8rem 0;
+
+    @media #{$lowHeight} {
+        padding: 4rem 0;
+    }
+
+    &.gray-wrapper {
+        background-color: $lightGray;
+    }
+
+    @media (max-width: 800px) {
+        padding: 5rem 0;
+    }
+}
+
+p.textbox {
+    line-height: 1.6;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    li.slick-active button:before {
+        color: white;
+    }
+    li button:before {
+        font-size: 16px;
+        color: white;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.second-hero {
+    height: 35vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media #{$ipad} {
+        height: 60vh;
+    }
+    .dark-wrapper {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 6%;
+            font-size: 3rem;
+            letter-spacing: 10px;
+            @media #{$ipad} {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.pre {
+    white-space: pre-wrap;
+}
+
+.rounded-box {
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid $gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &.box-row {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        @media #{$ipad} {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            height: 45px;
+        }
+        h3 {
+            font-size: 1rem;
+            @media #{$ipad} {
+                font-size: 20px;
+            }
+        }
+        .icon-title {
+            width: 100px;
+            text-align: center;
+            @media #{$ipad} {
+                width: 100%;
+            }
+        }
+        p {
+            text-align: left;
+            width: calc(100% - 100px - 2rem);
+            margin: 0;
+            margin-left: 2rem;
+            @media #{$ipad} {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 1rem;
+                text-align: center;
+            }
+        }
+    }
+    .icon-title {
+        text-align: center;
+    }
+    img {
+        height: 65px;
+        width: auto;
+        margin: auto;
+        @media #{$ipad} {
+            height: 48px;
+        }
+    }
+    i {
+        font-size: 50px;
+    }
+    h3 {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+        @media #{$ipad} {
+            font-size: 1.25rem;
+        }
+    }
+    p {
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+}
+
+.mexico-ribbon {
+    background-image: url('/assets/img/angel.png');
+    background-size: cover;
+    background-position: right top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0;
+    position: relative;
+    @media #{$ipad} {
+        padding: 4rem 0;
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(black, 0.5);
+    }
+    h2, p {
+        color: white;
+        text-align: center;
+    }
+    h2, p, button {
+        position: relative;
+    }
+    h2 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        @media #{$ipad} {
+            font-size: 1.5rem;
+        }
+    }
+    p {
+        margin: 1rem 0 2rem;
+        font-size: 20px;
+        width: calc(100% - 2rem);
+        @media #{$ipad} {
+            font-size: 1rem;
+        }
+    }
+}
+
+.ngx-file-drop__drop-zone, .ngx-file-drop__content {
+    height: auto !important;
+    border-radius: 8px !important;
+    border: 0 !important;
+    background-color: $lighterGray;
+}
+
+.ngx-file-drop__drop-zone--over {
+    background-color: $gray !important;
+    .ngx-file-drop__content {
+        background-color: $gray !important;
+    }
+}

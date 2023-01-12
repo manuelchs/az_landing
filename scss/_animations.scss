@@ -1,0 +1,183 @@
+.custom-animation {
+    transition: all .6s;
+    opacity: 0;
+
+    &.d-1 {
+        transition-delay: .1s;
+    }
+
+    &.d-2 {
+        transition-delay: 1s;
+    }
+}
+
+.custom-animation-left {
+    transform: translate(-50px, 0);
+}
+
+.custom-animation-right {
+    transform: translate(50px, 0);
+}
+
+.custom-animation-scale {
+    transform: scale(0.8);
+}
+
+.custom-animation-top {
+    transform: translate(0, -50px);
+}
+
+.custom-animation-bottom {
+    transform: translate(0, 50px);
+}
+
+.custom-animation-end {
+    opacity: 1;
+    transform: scale(1) perspective(0px) rotateX(0deg) translate(0,0);
+}
+
+@keyframes toggleAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+    70% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes toggleAnimationLeft {
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+        transform-origin: top left;
+    }
+    70% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes nonStatic {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    80% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes justOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes leftAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bottomAnimationMargin {
+    0% {
+        opacity: 0;
+        margin-bottom: -100px;
+    }
+    100% {
+        opacity: 1;
+        margin-bottom: 0px;
+    }
+}
+
+.toggle-animation {
+    animation: toggleAnimation .2s;
+}
+
+.open-right-top {
+    transform-origin: top right;
+}
+
+.open-center-top {
+    transform-origin: top center;
+}
+
+.open-left-top {
+    transform-origin: top left;
+}
+
+@keyframes alert {
+    0% {
+        transform: translateX(0px);
+    }
+    10% {
+        transform: translateX(-2px);
+    }
+    20% {
+        transform: translateX(2px);
+    }
+    30% {
+        transform: translateX(-2px);
+    }
+    40% {
+        transform: translateX(2px);
+    }
+    50% {
+        transform: translateX(-2px);
+    }
+    60% {
+        transform: translateX(2px);
+    }
+    70% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes hourglass {
+    0% {
+        transform: rotate(0deg) translate(-50%, calc(-50% + 2px));
+    }
+    30% {
+        transform: rotate(180deg) translate(-50%, calc(-50% + 2px));
+    }
+    70% {
+        transform: rotate(180deg) translate(-50%, calc(-50% + 2px));
+    }
+    100% {
+        transform: rotate(360deg) translate(-50%, calc(-50% + 2px));
+    }
+}

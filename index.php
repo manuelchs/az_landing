@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZ Equity Experts</title>
+    <?php include('parts/head.html') ?>
 </head>
 <body>
-    <h1>AZ Equity Experts</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ex totam porro earum dolore repellat veniam incidunt minus quidem error fugiat atque, sit inventore corporis quasi quia vel, dolorum quis.</p>
+    <div class="hero">
+        <nav class="main-nav">
+            <div class="gmw">
+                <button>
+                    <img src="/img/small-logo.png" alt="">
+                </button>
+                <a class="main-button icon icon-right" href="#"><span>Agendar videollamada en Calendly</span><i class="fal fa-calendar-alt"></i></a>
+            </div>
+        </nav>
+        <div class="hero-text">
+            <div class="gmw">
+                <div class="text">
+                    <h1>Invierte en una propiedad en los EEUU</h1>
+                    <p>Desde <span>150 MIL USD</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
