@@ -1,7 +1,12 @@
 .hero {
     background-image: url('/img/hero-bg.png');
-    background-position: center;
+    background-position: center bottom;
     background-size: cover;
+    // background-color: $lighterGray;
+
+    @media #{$ipad} {
+        background-image: url('/img/bg-mobile.png');
+    }
 
     .main-nav {
         padding: 2.5rem 0;
@@ -9,25 +14,122 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @media #{$ipad} {
+                justify-content: center;
+            }
+            .main-button {
+                @media #{$ipad} {
+                    display: none;
+                }
+            }
         }
     }
 
     .hero-text {
+        height: calc(80vh - 160px);
+        max-height: 800px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @media #{$ipad} {
+            height: auto;
+            max-height: unset;
+        }
         .text {
             max-width: 548px;
-        }
-        h1 {
-            font-size: 4rem;
-            color: $mainColorDark;
-            font-weight: $heavy;
-        }
-        p {
-            font-size: 2.5rem;
-            font-weight: $medium;
-            font-style: italic;
-            span {
+            margin-bottom: 80px;
+            padding-bottom: 3.5rem;
+            @media #{$ipad} {
+                margin-bottom: 0;
+                max-width: unset;
+            }
+            h1 {
+                font-size: 4rem;
+                color: $mainColorDark;
                 font-weight: $heavy;
+                @media #{$ipad} {
+                    font-size: 40px;
+                    text-align: center;
+                }
+            }
+            p {
+                font-size: 2.5rem;
+                font-weight: $medium;
                 font-style: italic;
+                @media #{$ipad} {
+                    font-size: 32px;
+                    text-align: center;
+                }
+                span {
+                    font-weight: $heavy;
+                    font-style: italic;
+                }
+            }
+
+            .house-mobile {
+                width: calc(100% + 2rem );
+                height: auto;
+                display: none;
+                margin-left: -1rem;
+                @media #{$ipad} {
+                    display: block;
+                    margin: 3rem 0;
+                }
+            }
+            .main-button {
+                display: none;
+                @media #{$ipad} {
+                    display: block;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+.about-section {
+    .info-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        h2 {
+            margin-bottom: 2rem;
+            color: black;
+        }
+        h4 {
+            font-size: 2rem;
+            color: $mainColorDark;
+            margin: 1rem 0 1.5rem;
+        }
+        .bullet {
+            background-color: $mainColorDark;
+            padding: 8px 12px;
+            padding-bottom: 4px;
+            color: white;
+            border-radius: 1000px;
+            font-size: 20px;
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+        .item-circle {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 2rem;
+            &:not(.end) {
+            }
+            &:before {
+                content: '';
+                display: block;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                background-color: $mainColorDark;
+                transform: translateY(-50%)
             }
         }
     }
