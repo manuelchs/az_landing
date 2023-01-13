@@ -126,7 +126,7 @@ a {
 
 .gmw {
     width: calc(100% - 2rem);
-    max-width: 1240px;
+    max-width: 1270px;
     margin: 0 auto;
 
     @media #{$macbook} {
@@ -165,6 +165,11 @@ a {
 
     @media (max-width: 800px) {
         padding: 5rem 0;
+    }
+
+    &.dark {
+        background-color: $black;
+        color: white;
     }
 }
 
@@ -372,4 +377,8 @@ h3 {
     &.white {
         color: white;
     }
+}
+
+p {
+    line-height: 1.5;
 }
