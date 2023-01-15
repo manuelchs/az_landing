@@ -229,6 +229,11 @@
                         margin-bottom: 1rem;
                         font-weight: bold;
                     }
+                    &.centered {
+                        h4, p {
+                            text-align: center;
+                        }
+                    }
                 }
             }
             h3 {
@@ -286,6 +291,30 @@
                         background-image: url('/img/video-5.jpg');
                         @media #{$ipad} {
                             background-image: url('/img/video-5-m.jpg');
+                        }
+                    }
+                    &.bg-6 {
+                        background-image: url('/img/video-6.jpg');
+                        @media #{$ipad} {
+                            background-image: url('/img/video-6-m.jpg');
+                        }
+                    }
+                    &.bg-7 {
+                        background-image: url('/img/video-7.jpg');
+                        @media #{$ipad} {
+                            background-image: url('/img/video-7-m.jpg');
+                        }
+                    }
+                    &.bg-8 {
+                        background-image: url('/img/video-8.jpg');
+                        @media #{$ipad} {
+                            background-image: url('/img/video-8-m.jpg');
+                        }
+                    }
+                    &.bg-9 {
+                        background-image: url('/img/video-9.jpg');
+                        @media #{$ipad} {
+                            background-image: url('/img/video-9-m.jpg');
                         }
                     }
                     &:after {
@@ -474,34 +503,41 @@
     h4 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
+        font-weight: bold;
     }
+}
 
-    .many-days {
+.blue-square-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .square-blue {
+        background-color: $mainColorDark;
+        height: 80px;
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        .days-blue {
-            background-color: $mainColorDark;
-            height: 80px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0 1.5rem;
-            padding-top: 10px;
-            border-radius: 8px;
-            margin-right: 1.5rem;
-            margin-bottom: 1.5rem;
-            span {
-                font-size: 48px;
-                font-weight: $heavy;
-                font-style: italic;
-                display: block;
-                line-height: 0.8;
-                &:last-child {
-                    font-size: 24px;
-                }
+        padding: 0 1.5rem;
+        padding-top: 10px;
+        border-radius: 8px;
+        margin-right: 1.5rem;
+        margin-bottom: 1.5rem;
+        span {
+            font-size: 48px;
+            font-weight: $heavy;
+            font-style: italic;
+            display: block;
+            line-height: 0.8;
+            &:last-child {
+                font-size: 24px;
             }
+        }
+    }
+    .text {
+        h4 {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
     }
 }
@@ -567,5 +603,153 @@
                 font-size: 1.5rem;
             }
         }
+    }
+
+    &.dark {
+        .req {
+            .icon {
+                background-color: $lightBlack;
+            }
+        }
+        .blue-square-text {
+            margin: 2rem 0;
+            .square-blue {
+                margin-bottom: 0;
+                span {
+                    font-size: 40px;
+                    &:last-child {
+                        font-size: 18px;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.invest-from {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    h4 {
+        flex-shrink: 0;
+        span {
+            font-style: italic;
+            display: block;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        span:first-child {
+            font-size: 40px;
+            font-weight: $medium;
+        }
+        span:last-child {
+            font-size: 52px;
+            font-weight: $heavy;
+        }
+    }
+    .globe {
+        width: 100%;
+        margin-left: 2rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &:before {
+            content: '';
+            display: block;
+            width: 0; 
+            height: 0; 
+            border-top: 24px solid transparent;
+            border-bottom: 24px solid transparent; 
+            border-right: 28px solid #424242; 
+        }
+        .globe-content {
+            background-color: #424242;
+            padding: 2rem;
+            border-radius: 1rem;
+            width: 100%;
+            .list-item {
+                font-size: 40px;
+                font-style: italic;
+                margin-bottom: 1.5rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                span.bold, span.blue {
+                    font-weight: $heavy;
+                }
+                span.blue {
+                    color: $mainColor;
+                }
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 0; 
+                    height: 0; 
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent; 
+                    border-left: 20px solid $mainColorDark;
+                    margin-top: 15px;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.invest-from-advise {
+    margin-top: 40px;
+    h4, p {
+        font-size: 14px;
+    }
+}
+
+.icons-circle {
+    margin-top: 2rem;
+    .icon-circle {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .icon {
+            width: 64px;
+            height: 64px;
+            background-color: $lightGray;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+            &.blue {
+                background-color: $mainColorDark;
+                i, span {
+                    color: white;
+                }
+            }
+            i {
+                font-size: 1.5rem;
+            }
+            span {
+                font-weight: bold;
+                font-size: 1.5rem;
+                line-height: 1;
+            }
+        }
+        .text {
+            h5 {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            p {
+
+            }
+        }
+        
     }
 }
