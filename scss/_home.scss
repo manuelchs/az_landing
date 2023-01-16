@@ -1,5 +1,5 @@
 .hero {
-    background-image: url('/img/hero-bg.png');
+    background-image: url('/img/bg-hero-desk.png');
     background-position: center bottom;
     background-size: cover;
     // background-color: $lighterGray;
@@ -35,9 +35,21 @@
             height: auto;
             max-height: unset;
         }
+        .gmw {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & > img {
+                width: 100%;
+                max-width: 750px;
+                @media #{$ipad} {
+                    display: none;
+                }
+            }
+        }
         .text {
             max-width: 548px;
-            margin-bottom: 80px;
+            // margin-bottom: 80px;
             padding-bottom: 3.5rem;
             @media #{$ipad} {
                 margin-bottom: 0;
@@ -67,13 +79,13 @@
             }
 
             .house-mobile {
-                width: calc(100% + 2rem );
-                height: auto;
                 display: none;
-                margin-left: -1rem;
                 @media #{$ipad} {
                     display: block;
+                    width: calc(100% + 2rem );
+                    height: auto;
                     margin: 3rem 0;
+                    margin-left: -1rem;
                 }
             }
             .main-button {
@@ -194,16 +206,27 @@
                 }
             }
         }
+        .main-button {
+            @media #{$ipad} {
+                margin: auto;
+            }
+        }
     }
 }
 
 .lines-wrapper {
+    @media #{$ipad} {
+        padding: 1rem;
+    }
     .secondary-wrapper {
-        width: calc(100% - 1rem);
+        width: 100%;
         // background-color: #003;
         margin: auto;
         max-width: 1880px;
         position: relative;
+        @media #{$ipad} {
+            padding: 5rem 0;
+        }
         .number {
             position: absolute;
             top: 0;
@@ -211,9 +234,13 @@
             font-weight: $heavy;
             font-style: italic;
             font-size: 72px;
+            @media #{$ipad} {
+                font-size: 32px;
+            }
         }
         .gmw {
             // background-color: #030;
+            width: 100%;
             .content {
                 &.two-col {
                     display: grid;
@@ -232,6 +259,9 @@
                     &.centered {
                         h4, p {
                             text-align: center;
+                            @media #{$ipad} {
+                                text-align: left;
+                            }
                         }
                     }
                 }
@@ -243,6 +273,9 @@
                 margin-bottom: 80px;
                 &.large {
                     max-width: 870px;
+                }
+                @media #{$ipad} {
+                    font-size: 32px;
                 }
             }
             .content-section.video {
@@ -362,13 +395,34 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
+                @media #{$ipad} {
+                    flex-direction: column;
+                }
                 .icon-wrapper {
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     width: 20%;
+                    @media #{$ipad} {
+                        width: 100%;
+                        margin-bottom: 2rem;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
                     img {
                         margin-right: 1rem;
+                    }
+                    .img-wrapper {
+                        @media #{$ipad} {
+                            width: 70px;
+                            margin-right: 1rem;
+                            flex-shrink: 0;
+                            img {
+                                margin: 0;
+                                margin: auto;
+                            }
+                        }
                     }
                 }
             }
@@ -377,6 +431,9 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 gap: 2rem;
+                @media #{$ipad} {
+                    grid-template-columns: 1fr;
+                }
                 .card {
                     padding: 2rem;
                     box-shadow: 0px 3px 16px rgba(black, 0.1);
@@ -385,6 +442,9 @@
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
+                    @media #{$ipad} {
+                        width: 100%;
+                    }
                     i {
                         font-size: 48px;
                         color: $mainColorDark;
@@ -406,13 +466,22 @@
                 h4 {
                     font-size: 1.5rem;
                     margin-bottom: 1rem;
+                    @media #{$ipad} {
+                        margin-bottom: 2rem;
+                    }
                 }
                 .steps-process {
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-start;
+                    @media #{$ipad} {
+                        flex-direction: column;
+                    }
                     .steps {
                         margin-right: 2rem;
+                        @media #{$ipad} {
+                            margin-right: 0;
+                        }
                         &:last-child {
                             margin-right: 0;
                         }
@@ -465,6 +534,9 @@
             right: calc(100% - 320px);
             opacity: 0.05;
             z-index: 3;
+            @media #{$ipad} {
+                display: none;
+            }
         }
     }
     &.white {
@@ -477,6 +549,9 @@
             bottom: 40px;
             left: calc(100% - 320px);
             z-index: 3;
+            @media #{$ipad} {
+                display: none;
+            }
         }
     }
 }
@@ -485,6 +560,9 @@
     background-image: url('/img/e-e-gray.png');
     background-position: 160% center;
     background-repeat: no-repeat;
+    @media #{$ipad} {
+        background-image: none;
+    }
     h3 {
         text-align: center;
         margin-bottom: 3rem;
@@ -499,6 +577,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+
+    @media #{$ipad} {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
     h4 {
         font-size: 1.5rem;
@@ -549,6 +632,9 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 1.5rem;
+            @media #{$ipad} {
+                gap: 0.5rem;
+            }
             .card {
                 background-color: white;
                 border-radius: 8px;
@@ -558,12 +644,18 @@
                 justify-content: center;
                 align-items: center;
                 padding: 1.5rem;
+                @media #{$ipad} {
+                    padding: 1.5rem 0.5rem;
+                }
                 h5 {
                     font-size: 48px;
                     margin-top: 1rem;
                     line-height: 1;
                     font-weight: $heavy;
                     font-style: italic;
+                    @media #{$ipad} {
+                        font-size: 32px;
+                    }
                 }
                 span {
                     font-size: 18px;
@@ -632,6 +724,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @media #{$ipad} {
+        flex-direction: column;
+    }
     h4 {
         flex-shrink: 0;
         span {
@@ -643,10 +738,16 @@
         span:first-child {
             font-size: 40px;
             font-weight: $medium;
+            @media #{$ipad} {
+                font-size: 24px;
+            }
         }
         span:last-child {
             font-size: 52px;
             font-weight: $heavy;
+            @media #{$ipad} {
+                font-size: 32px;
+            }
         }
     }
     .globe {
@@ -655,6 +756,10 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        @media #{$ipad} {
+            flex-direction: column;
+            margin: 0;
+        }
         &:before {
             content: '';
             display: block;
@@ -663,6 +768,11 @@
             border-top: 24px solid transparent;
             border-bottom: 24px solid transparent; 
             border-right: 28px solid #424242; 
+            @media #{$ipad} {
+                border-right: 24px solid transparent;
+                border-left: 24px solid transparent;
+                border-bottom: 24px solid #424242; 
+            }
         }
         .globe-content {
             background-color: #424242;
@@ -676,6 +786,9 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
+                @media #{$ipad} {
+                    font-size: 1.5rem;
+                }
                 span.bold, span.blue {
                     font-weight: $heavy;
                 }
