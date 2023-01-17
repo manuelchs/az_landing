@@ -215,9 +215,27 @@
 }
 
 .lines-wrapper {
+    position: relative;
     @media #{$ipad} {
         padding: 1rem;
     }
+
+    &.first-lines {
+        .secondary-wrapper {
+            &:before {
+                top: 36px;
+            }
+        }
+    }
+
+    &.last-lines {
+        .secondary-wrapper {
+            &:before {
+                height: calc(8rem + 40px);
+            }
+        }
+    }
+
     .secondary-wrapper {
         width: 100%;
         // background-color: #003;
@@ -226,6 +244,28 @@
         position: relative;
         @media #{$ipad} {
             padding: 5rem 0;
+        }
+        &:before, &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: rgba(white, 0.1);
+            @media #{$ipad} {
+                display: none;
+            }
+        }
+        &:before {
+            left: 0px;
+            top: -8rem;
+            width: 4px;
+            height: calc(100% + 16rem);
+            z-index: 10;
+        }
+        &:after {
+            width: 50%;
+            height: 4px;
+            left: 4px;
+            top: 36px;
         }
         .number {
             position: absolute;
@@ -241,6 +281,8 @@
         .gmw {
             // background-color: #030;
             width: 100%;
+            z-index: 5;
+            position: relative;
             .content {
                 &.two-col {
                     display: grid;
@@ -271,6 +313,9 @@
                 margin: auto;
                 text-align: center;
                 margin-bottom: 80px;
+                &:first-child {
+                    padding: 0 2rem;
+                }
                 &.large {
                     max-width: 870px;
                 }
@@ -524,6 +569,7 @@
     &.dark {
         background-color: #212121;
         position: relative;
+
         .number {
             color: $lightBlack;
         }
@@ -538,9 +584,17 @@
                 display: none;
             }
         }
+        h3:first-child {
+            background-color: #212121;
+        }
     }
     &.white {
         position: relative;
+        .secondary-wrapper {
+            &:before, &:after {
+                background-color: rgba(black, 0.1);
+            }
+        }
         .number {
             color: $gray;
         }
@@ -553,6 +607,9 @@
                 display: none;
             }
         }
+        h3:first-child {
+            background-color: white;
+        }
     }
 }
 
@@ -560,6 +617,12 @@
     background-image: url('/img/e-e-gray.png');
     background-position: 160% center;
     background-repeat: no-repeat;
+    
+    .secondary-wrapper {
+        &:after {
+            display: none;
+        }
+    }
     @media #{$ipad} {
         background-image: none;
     }

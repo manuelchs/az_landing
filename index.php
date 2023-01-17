@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-    <div class="main-wrapper dark lines-wrapper">
+    <div class="main-wrapper dark lines-wrapper first-lines">
         <div class="secondary-wrapper">
             <div class="number custom-animation custom-animation-scale">1</div>
             <div class="gmw">
@@ -198,11 +198,13 @@
         </div>
         <img class="e-ornament" src="/img/e-e-white.png" alt="">
     </div>
-    <div class="main-wrapper testimonials">
-        <div class="gmw">
-            <h3 class="custom-animation custom-animation-bottom">Testimoniales</h3>
-            <?php include('parts/swiper.html') ?>
-            <?php include('parts/call_to_action.html'); ?>
+    <div class="main-wrapper lines-wrapper white testimonials">
+        <div class="secondary-wrapper">
+            <div class="gmw">
+                <h3 class="custom-animation custom-animation-bottom">Testimoniales</h3>
+                <?php include('parts/swiper.html') ?>
+                <?php include('parts/call_to_action.html'); ?>
+            </div>
         </div>
     </div>
     <div class="main-wrapper dark lines-wrapper">
@@ -397,7 +399,7 @@
         </div>
         <img class="e-ornament" src="/img/e-e-white.png" alt="">
     </div>
-    <div class="main-wrapper lines-wrapper white">
+    <div class="main-wrapper lines-wrapper white last-lines">
         <div class="secondary-wrapper">
             <div class="number custom-animation custom-animation-scale">9</div>
             <div class="gmw">

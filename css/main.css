@@ -233,6 +233,10 @@ body {
   font-size: 16px;
   color: #3C3F41;
   overflow-x: hidden;
+  position: relative;
+}
+body > * {
+  overflow: hidden;
 }
 
 button {
@@ -1557,10 +1561,19 @@ input, select, textarea {
   }
 }
 
+.lines-wrapper {
+  position: relative;
+}
 @media only screen and (max-width: 768px) {
   .lines-wrapper {
     padding: 1rem;
   }
+}
+.lines-wrapper.first-lines .secondary-wrapper:before {
+  top: 36px;
+}
+.lines-wrapper.last-lines .secondary-wrapper:before {
+  height: calc(8rem + 40px);
 }
 .lines-wrapper .secondary-wrapper {
   width: 100%;
@@ -1572,6 +1585,30 @@ input, select, textarea {
   .lines-wrapper .secondary-wrapper {
     padding: 5rem 0;
   }
+}
+.lines-wrapper .secondary-wrapper:before, .lines-wrapper .secondary-wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+@media only screen and (max-width: 768px) {
+  .lines-wrapper .secondary-wrapper:before, .lines-wrapper .secondary-wrapper:after {
+    display: none;
+  }
+}
+.lines-wrapper .secondary-wrapper:before {
+  left: 0px;
+  top: -8rem;
+  width: 4px;
+  height: calc(100% + 16rem);
+  z-index: 10;
+}
+.lines-wrapper .secondary-wrapper:after {
+  width: 50%;
+  height: 4px;
+  left: 4px;
+  top: 36px;
 }
 .lines-wrapper .secondary-wrapper .number {
   position: absolute;
@@ -1588,6 +1625,8 @@ input, select, textarea {
 }
 .lines-wrapper .secondary-wrapper .gmw {
   width: 100%;
+  z-index: 5;
+  position: relative;
 }
 .lines-wrapper .secondary-wrapper .gmw .content.two-col {
   display: grid;
@@ -1617,6 +1656,9 @@ input, select, textarea {
   margin: auto;
   text-align: center;
   margin-bottom: 80px;
+}
+.lines-wrapper .secondary-wrapper .gmw h3:first-child {
+  padding: 0 2rem;
 }
 .lines-wrapper .secondary-wrapper .gmw h3.large {
   max-width: 870px;
@@ -1909,8 +1951,14 @@ input, select, textarea {
     display: none;
   }
 }
+.lines-wrapper.dark h3:first-child {
+  background-color: #212121;
+}
 .lines-wrapper.white {
   position: relative;
+}
+.lines-wrapper.white .secondary-wrapper:before, .lines-wrapper.white .secondary-wrapper:after {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .lines-wrapper.white .number {
   color: #C0C6CC;
@@ -1926,11 +1974,17 @@ input, select, textarea {
     display: none;
   }
 }
+.lines-wrapper.white h3:first-child {
+  background-color: white;
+}
 
 .testimonials {
   background-image: url("/img/e-e-gray.png");
   background-position: 160% center;
   background-repeat: no-repeat;
+}
+.testimonials .secondary-wrapper:after {
+  display: none;
 }
 @media only screen and (max-width: 768px) {
   .testimonials {
