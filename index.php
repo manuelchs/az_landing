@@ -25,6 +25,7 @@
                 </div>
                 <img class="custom-animation custom-animation-left" src="/img/hero-img.png" alt="">
             </div>
+            <button class="arrows-button"><i class="far fa-chevrons-down"></i></button>
         </div>
     </div>
     <div class="main-wrapper about-section">

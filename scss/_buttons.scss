@@ -1,7 +1,7 @@
 .main-button {
     background-color: $mainColor;
     border-radius: 8px;
-    padding: 1rem 2rem;
+    padding: 1.3rem 3rem;
     min-width: 200px;
     cursor: pointer;
     transition: all .2s;
@@ -43,6 +43,7 @@
         position: relative;
         line-height: 1;
         font-weight: $medium;
+        font-size: 18px;
     }
 
 

@@ -387,3 +387,43 @@ h3 {
 p {
     line-height: 1.5;
 }
+
+.call-to-action-wrapper {
+    position: relative;
+    width: fit-content;
+    &:after {
+        content: '\f323';
+        font-family: 'Font Awesome 6 Pro';
+        font-weight: normal;
+        position: absolute;
+        left: calc(100% + 1rem);
+        top: 17px;
+        font-size: 1.5rem;
+        color: $mainColor;
+        animation: arrowsLeft 1s infinite;
+    }
+}
+
+@keyframes arrowsLeft {
+    0% {
+        left: calc(100% + 0.5rem);
+    }
+    50% {
+        left: calc(100% + 1.5rem);
+    }
+    100% {
+        left: calc(100% + 0.5rem);
+    }
+}
+
+@keyframes arrowsDown {
+    0% {
+        bottom: 4rem;
+    }
+    50% {
+        bottom: 5rem;
+    }
+    100% {
+        bottom: 4rem;
+    }
+}
