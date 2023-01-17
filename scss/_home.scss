@@ -43,10 +43,16 @@
             transform: translateX(-50%);
             bottom: 4rem;
             animation: arrowsDown 1s infinite;
+            @media #{$ipad} {
+                bottom: 2rem;
+            }
             i {
                 font-size: 2rem;
                 color: white;
                 text-shadow: 0px 3px 8px rgba(black, 0.1);
+                @media #{$ipad} {
+                    color: $mainColor;
+                }
             }
         }
         .gmw {
@@ -206,6 +212,7 @@
                     align-items: center;
                     font-size: 24px;
                     margin-right: 0.5rem;
+                    flex-shrink: 0;
                     i {
                         color: $mainColorDark;
                     }

@@ -21,7 +21,6 @@
                     <h1 class="custom-animation custom-animation-right">Invierte en una propiedad en los EEUU</h1>
                     <p class="custom-animation custom-animation-right">Desde <span>150 MIL USD</span></p>
                     <img class="house-mobile custom-animation custom-animation-bottom" src="/img/house-mobile.png" alt="">
-                    <?php include('parts/call_to_action.html'); ?>
                 </div>
                 <img class="custom-animation custom-animation-left" src="/img/hero-img.png" alt="">
             </div>

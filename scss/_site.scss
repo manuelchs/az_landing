@@ -418,12 +418,12 @@ p {
 
 @keyframes arrowsDown {
     0% {
-        bottom: 4rem;
+        transform: translateY(0) translateX(-50%);
     }
     50% {
-        bottom: 5rem;
+        transform: translateY(1rem) translateX(-50%);
     }
     100% {
-        bottom: 4rem;
+        transform: translateY(0) translateX(-50%);
     }
 }
