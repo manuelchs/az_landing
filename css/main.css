@@ -579,26 +579,35 @@ p {
   width: fit-content;
 }
 .call-to-action-wrapper:after {
-  content: "";
+  content: "";
   font-family: "Font Awesome 6 Pro";
   font-weight: normal;
   position: absolute;
-  left: calc(100% + 1rem);
+  right: calc(100% + 1rem);
   top: 17px;
   font-size: 1.5rem;
   color: #1976D2;
-  animation: arrowsLeft 1s infinite;
+  animation: arrowsRight 1s infinite;
+}
+@media only screen and (max-width: 768px) {
+  .call-to-action-wrapper:after {
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 1rem);
+    animation: arrowsDown 1s infinite;
+  }
 }
 
-@keyframes arrowsLeft {
+@keyframes arrowsRight {
   0% {
-    left: calc(100% + 0.5rem);
+    right: calc(100% + 0.5rem);
   }
   50% {
-    left: calc(100% + 1.5rem);
+    right: calc(100% + 1.5rem);
   }
   100% {
-    left: calc(100% + 0.5rem);
+    right: calc(100% + 0.5rem);
   }
 }
 @keyframes arrowsDown {
@@ -1551,6 +1560,22 @@ input, select, textarea {
   font-size: 2rem;
   color: #17597C;
   margin: 1rem 0 1.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .about-section .info-about h4 {
+    margin-bottom: 0;
+  }
+}
+.about-section .info-about .luis-mata-mobile {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .about-section .info-about .luis-mata-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
 }
 .about-section .info-about .bullet {
   background-color: #17597C;

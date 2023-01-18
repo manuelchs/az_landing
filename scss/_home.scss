@@ -151,6 +151,18 @@
             font-size: 2rem;
             color: $mainColorDark;
             margin: 1rem 0 1.5rem;
+            @media #{$ipad} {
+                margin-bottom: 0;
+            }
+        }
+        .luis-mata-mobile {
+            display: none;
+            @media #{$ipad} {
+                display: block;
+                width: 100%;
+                height: auto;
+                margin-bottom: 2rem;
+            }
         }
         .bullet {
             background-color: $mainColorDark;

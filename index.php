@@ -34,6 +34,7 @@
             <div class="info-about">
                 <h2 class="custom-animation custom-animation-left">Acerca de nosotros</h2>
                 <h4 class="custom-animation custom-animation-right">¡Hola! Soy Luis Mata</h4>
+                <img src="/img/luis-mata-mobile.png" alt="" class="luis-mata-mobile">
                 <span class="bullet custom-animation custom-animation-left">CEO y socio fundador</span>
                 <div class="item-circle custom-animation custom-animation-right">
                     <p>Somos una firma inmobiliaria con 15 años de trayectoria, especializada en la compra-venta y administración de bienes raíces.</p>
@@ -46,25 +47,25 @@
                         <div class="icon custom-animation custom-animation-left">
                             <i class="far fa-home"></i>
                         </div>
-                        <p class="custom-animation custom-animation-right"><span>15</span> años de experiencia</p>
+                        <p class="custom-animation custom-animation-right"><span class="custom-animation counter-animation" counter="15">15</span> años de experiencia</p>
                     </div>
                     <div class="icon-item">
                         <div class="icon custom-animation custom-animation-left">
                             <i class="far fa-hands"></i>
                         </div>
-                        <p class="custom-animation custom-animation-right"><span>1324</span> tratos cerrados</p>
+                        <p class="custom-animation custom-animation-right"><span class="custom-animation counter-animation" counter="1324">1324</span> tratos cerrados</p>
                     </div>
                     <div class="icon-item">
                         <div class="icon custom-animation custom-animation-left">
                             <i class="far fa-list"></i>
                         </div>
-                        <p class="custom-animation custom-animation-right"><span>1324</span> propiedades listadas</p>
+                        <p class="custom-animation custom-animation-right"><span class="custom-animation counter-animation" counter="1324">1324</span> propiedades listadas</p>
                     </div>
                     <div class="icon-item">
                         <div class="icon custom-animation custom-animation-left">
                             <i class="far fa-face-smile-hearts"></i>
                         </div>
-                        <p class="custom-animation custom-animation-right"><span>4026</span> clientes satisfechos</p>
+                        <p class="custom-animation custom-animation-right"><span class="custom-animation counter-animation" counter="4026">4026</span> clientes satisfechos</p>
                     </div>
                 </div>
                 <?php include('parts/call_to_action.html'); ?>
@@ -223,7 +224,7 @@
                     </div>
                     <div class="days">
                         <div class="blue-square-text">
-                            <div class="square-blue custom-animation custom-animation-right"><span>30</span><span>DÍAS</span></div>
+                            <div class="square-blue custom-animation custom-animation-right"><span class="custom-animation counter-animation" counter="30">30</span><span>DÍAS</span></div>
                             <div class="text">
                                 <h4 class="custom-animation custom-animation-left">¿En cuánto tiempo se renta su propiedad?</h4>
                                 <p class="custom-animation custom-animation-left">Todas las propiedades adquiridas por clientes pueden rentarse en menos de 30 días.</p>
@@ -258,17 +259,17 @@
                             <div class="cards-wrapper">
                                 <div class="card blue custom-animation custom-animation-bottom">
                                     <span>Desde</span>
-                                    <h5>$150K</h5>
+                                    <h5 class="custom-animation counter-animation" counter="150" counter-prefix="$" counter-suffix="K">$150K</h5>
                                     <span>USD</span>
                                 </div>
                                 <div class="card custom-animation custom-animation-top">
                                     <span>Desde</span>
-                                    <h5>$350K</h5>
+                                    <h5 class="custom-animation counter-animation" counter="350" counter-prefix="$" counter-suffix="K">$350K</h5>
                                     <span>USD</span>
                                 </div>
                                 <div class="card custom-animation custom-animation-bottom">
                                     <span>Desde</span>
-                                    <h5>$500K</h5>
+                                    <h5 class="custom-animation counter-animation" counter="500" counter-prefix="$" counter-suffix="K">$500K</h5>
                                     <span>USD</span>
                                 </div>
                             </div>
@@ -309,12 +310,12 @@
                     <div class="bg bg-6"></div>
                 </div>
                 <div class="invest-from">
-                    <h4 class="custom-animation custom-animation-right"><span>Invierte desde </span><span>150 MIL USD</span></h4>
+                    <h4 class="custom-animation custom-animation-right"><span>Invierte desde </span><span class="custom-animation counter-animation" counter="150" counter-suffix=" MIL USD">150 MIL USD</span></h4>
                     <div class="globe custom-animation custom-animation-left">
                         <div class="globe-content">
-                            <div class="list-item"><p><span class="bold">Cobra renta en dólares de forma </span>mensual desde <span class="blue">1000 USD</span></p></div>
+                            <div class="list-item"><p><span class="bold">Cobra renta en dólares de forma </span>mensual desde <span class="blue custom-animation counter-animation" counter="1000" counter-suffix=" USD">1000 USD</span></p></div>
                             <div class="list-item"><p><span class="bold">Duplica tu inversión </span>en <span class="blue">4 años</span></p></div>
-                            <div class="list-item"><p><span class="bold">Con una Plusvalía anual </span><span class="blue">desde el 12%</span></p></div>
+                            <div class="list-item"><p><span class="bold">Con una Plusvalía anual </span><span class="blue custom-animation counter-animation" counter="12" counter-prefix="desde el " counter-suffix="%">desde el 12%</span></p></div>
                         </div>
                     </div>
                 </div>
