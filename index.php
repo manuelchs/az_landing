@@ -3,7 +3,6 @@
 <head>
     <?php include('parts/head.html') ?>
     <script src="/scripts/main.js"></script>
-
 </head>
 <body>
     <div class="hero">
@@ -531,7 +530,7 @@
         <div class="dark-section">
             <div class="gmw">
                 <img src="/img/ssl-icon.png" alt="">
-                <p>AZ EQUITY EXPERTS ® 2023. Todos los derechos reservados.</p>
+                <p>Todos los derechos reservados AZ Equity Experts ® 2023</p>
                 <p>Sitio desarrollado por <a href="#">aori.mx</a></p>
             </div>
         </div>
