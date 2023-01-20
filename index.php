@@ -202,6 +202,7 @@
         <div class="secondary-wrapper">
             <div class="gmw">
                 <h3 class="custom-animation custom-animation-bottom">Testimoniales</h3>
+                <img class="logo-testimonials" src="/img/big-logo.png" alt="">
                 <?php include('parts/swiper.html') ?>
                 <?php include('parts/call_to_action.html'); ?>
             </div>
@@ -530,8 +531,8 @@
         <div class="dark-section">
             <div class="gmw">
                 <img src="/img/ssl-icon.png" alt="">
-                <p>Todos los derechos reservados AZ Equity Experts ® 2023</p>
-                <p>Sitio desarrollado por <a href="#">aori.mx</a></p>
+                <p class="copyright">Todos los derechos reservados AZ Equity Experts ® 2023</p>
+                <p class="aori">Sitio desarrollado por <a href="#">aori.mx</a></p>
             </div>
         </div>
     </footer>

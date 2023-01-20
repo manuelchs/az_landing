@@ -668,11 +668,30 @@
     }
     h3 {
         text-align: center;
-        margin-bottom: 3rem;
+        @media #{$ipad} {
+            margin: 0;
+        }
+    }
+
+    .logo-testimonials {
+        display: none;
+        @media #{$ipad} {
+            display: block;
+            height: 80px;
+            width: auto;
+            margin: 3rem auto;
+        }
     }
     .call-to-action-wrapper {
         margin: auto;
         margin-top: 4rem;
+    }
+}
+
+.testimonials .secondary-wrapper .gmw h3 {
+    margin-bottom: 3rem;
+    @media #{$ipad} {
+        margin: 0;
     }
 }
 

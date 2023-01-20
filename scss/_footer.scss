@@ -92,16 +92,36 @@ footer {
             justify-content: space-between;
             align-items: center;
             @media #{$ipad} {
-                flex-direction: column;
+                flex-wrap: wrap;
             }
             p {
                 font-size: 14px;
+                text-align: center;
                 @media #{$ipad} {
                     margin-top: 1.5rem;
                 }
                 a {
                     color: white;
                     text-decoration: underline;
+                }
+            }
+            img {
+                @media #{$ipad} {
+                    order: 1;
+                }
+            }
+            .copyright {
+                @media #{$ipad} {
+                    margin: 0;
+                    order: 3;
+                    margin-top: 1.5rem;
+                    width: 100%;
+                }
+            }
+            .aori {
+                @media #{$ipad} {
+                    margin: 0;
+                    order: 2;
                 }
             }
         }
