@@ -223,7 +223,7 @@
                         <p class="custom-animation custom-animation-right">Somos una firma inmobiliaria con 15 años de trayectoria, especializada en la compra-venta y administración de bienes raíces. Nosotros somos el puente con inversionistas dentro y fuera de los EU que buscan comprar propiedades por debajo del valor de mercado sin necesidad de tener que administrarlos personalmente.<br><br>Nuestra firma les permite a nuestros clientes tener una administración remota de sus bienes inmuebles por medio de expertos inmobiliarios que maximizan la rentabilidad de su inversión no solo al momento de la compra sino durante su administración y futura venta.</p>
                     </div>
                     <div class="days">
-                        <div class="blue-square-text">
+                        <div class="blue-square-text mb-2">
                             <div class="square-blue custom-animation custom-animation-right"><span class="custom-animation counter-animation" counter="30">30</span><span>DÍAS</span></div>
                             <div class="text">
                                 <h4 class="custom-animation custom-animation-left">¿En cuánto tiempo se renta su propiedad?</h4>

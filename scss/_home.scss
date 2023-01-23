@@ -5,6 +5,7 @@
 
     @media #{$ipad} {
         background-image: url('/img/bg-mobile.png');
+        padding-bottom: 4rem;
     }
 
     .main-nav {
@@ -47,7 +48,8 @@
                 bottom: 3rem;
             }
             @media #{$ipad} {
-                bottom: 2rem;
+                bottom: unset;
+                top: 100%;
             }
             i {
                 font-size: 2rem;
@@ -284,6 +286,7 @@
         position: relative;
         @media #{$ipad} {
             padding: 5rem 0;
+            width: 100%;
         }
         &:before, &:after {
             content: '';
@@ -566,6 +569,7 @@
                         margin-right: 2rem;
                         @media #{$ipad} {
                             margin-right: 0;
+                            margin-bottom: 2rem;
                         }
                         &:last-child {
                             margin-right: 0;
