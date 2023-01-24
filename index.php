@@ -34,7 +34,7 @@
                 <h2 class="custom-animation custom-animation-left">Acerca de nosotros</h2>
                 <h4 class="custom-animation custom-animation-right">¡Hola! Soy Luis Mata</h4>
                 <img src="/img/luis-mata-mobile.png" alt="" class="luis-mata-mobile">
-                <span class="bullet custom-animation custom-animation-left">CEO y socio fundador</span>
+                <span class="bullet custom-animation custom-animation-left">CEO y Socio Fundador</span>
                 <div class="item-circle custom-animation custom-animation-right">
                     <p>Somos una firma inmobiliaria con 15 años de trayectoria, especializada en la compra-venta y administración de bienes raíces.</p>
                 </div>
