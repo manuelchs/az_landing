@@ -13,7 +13,7 @@
         .gmw {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             @media #{$ipad} {
                 justify-content: center;
             }
@@ -45,7 +45,7 @@
             bottom: 4rem;
             animation: arrowsDown 1s infinite;
             @media #{$macbook} {
-                bottom: 3rem;
+                bottom: 2rem;
             }
             @media #{$ipad} {
                 bottom: unset;
